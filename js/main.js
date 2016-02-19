@@ -121,6 +121,9 @@
   Snap.load("data/game_board.svg", function(f) {
     var g = f.select("g");
     s.append(g);
+    // Add token
+    var token = s.circle(30, 30, 30);
+    token.drag();
     generate();
   });
 

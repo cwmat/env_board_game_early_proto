@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Testing Browser Based Board Game</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <h1>Testing Browser Based Board Game Functionality</h1>
+        <div class="col-md-6">
+          <!-- Next Steps -->
+          <h2>Goals</h2>
+          <ul>
+            <li>Display SVG board game <strong>(simplified)</strong> elements (note, these were created quickly in Inkscape so they are a bit rough/'lumpy')</li>
+            <li>SVG elements are able to output information to the screen on interaction events</li>
+            <li>SVG element styles can be altered through user input</li>
+            <li>SVG element representing game token is moveable</li>
+          </ul>
+        </div>
+        <!-- Next Steps -->
+        <div class="col-md-6">
+          <h2>Next Steps</h2>
+          <ul>
+            <li>Meet with the team and determine if a prototype for a canvas based solution is warranted (possibly using an actual game engine library)</li>
+            <li>Flesh out SVG prototype</li>
+            <li>Convert Bryan's prototype to SVG.  Either directly as SVG or taking the SVG properties and storing in a JSON with other gameboard data and then use Snap SVG or D3 JS to draw it</li>
+            <li>Implement the gameboard and associated functions using an organizational library (i.e. Angular JS)</li>
+            <li>Develop User controls and interface (i.e. data window)</li>
+            <li>Get the token to recognize extents (i.e. "am I hovering over another element".  May need to build in collision detection manually, not sure if this is provided with either D3 or Snap)</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr>
+      <!-- Main content -->
+      <div class="row">
+        <div class="col-md-6">
+          <div id="main-content">
+            <svg id="game-board" width=500 height=500></svg>
+          </div>
+        </div>
+        <div class="col-md-6 data-window">
+          <h4 class="data-window-entry">Hover State:</h4><span id="hover-state" class="dynamic-data-entry"></span>
+          <h4 class="data-window-entry">Last Clicked:</h4><span id="clicked-state" class="dynamic-data-entry"></span>
+          <h4 class="data-window-entry">Toggle Colors:</h4>
+          <ul>
+            <li><button type="btn btn-default" name="blue1" onclick="handleButton(this)">Blue 1 (top left)</button></li>
+            <li><button type="btn btn-default" name="blue2" onclick="handleButton(this)">Blue 2 (top right)</button></li>
+            <li><button type="btn btn-default" name="red1" onclick="handleButton(this)">Red 1 (bottom left)</button></li>
+            <li><button type="btn btn-default" name="red2" onclick="handleButton(this)">Red 2 (bottom right)</button></li>
+          </ul>
+        </div>
+      </div>
+
+    <!-- End bootstrap container -->
+    </div>
+
+    <!-- Import JS -->
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/snap.svg-min.js"></script>
+    <script src="js/d3.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

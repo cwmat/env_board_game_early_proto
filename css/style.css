@@ -1,0 +1,25 @@
+.game-cell:hover {
+  /* Bad form to use important but I have to in this demo case as the SVG export from inkscape has inline style that takes precedence otherwise */
+  fill: yellow !important;
+}
+
+.data-window h4 {
+  margin-top: 2em;
+}
+
+.data-window li {
+  list-style: none;
+}
+
+.data-windows-entry span {
+  margin-right: 3em;
+}
+
+.dynamic-data-entry {
+  font-weight: bold;
+  color: green;
+}
+
+li button {
+  margin: 1em 0;
+}
